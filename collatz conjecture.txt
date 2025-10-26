@@ -1,0 +1,16 @@
+while True:
+    user_input = input("Number?>")
+    while True:
+        try:
+            user_input = int(user_input)
+        except ValueError:
+            print("Invalid Number")
+            continue
+        while user_input != 1:
+            if user_input % 2 == 0:
+                user_input = user_input // 2
+            else:
+                user_input = user_input * 3 + 1
+            print(user_input)
+        print("you lost the game lol")
+        break
