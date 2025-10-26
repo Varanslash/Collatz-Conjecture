@@ -1,0 +1,25 @@
+import random
+
+total = 0
+
+while True:
+    cli = input("Number?>")
+    cli = int(cli)
+    n = input("How many times do you want this function repeated?>")
+    n = int(n)
+    for _ in range(n):
+        if cli % 2 == 0:
+            rng = random.choice(range(1, 10))
+            if rng < 5:
+                cli = cli ** 2 * rng
+            else:
+                cli = (cli ** 2 * rng) - 1
+        else:
+            rng = random.choice(range(1, 10))
+            if rng < 5:
+                cli = cli ** 3 * rng
+            else:
+                cli = (cli ** 3 * rng) - 1
+        
+    total += cli
+    print("Final Number:", total)
